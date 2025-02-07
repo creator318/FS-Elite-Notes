@@ -20,7 +20,7 @@ Output Format:
 An integer result, smallest positive energy.
 
 Sample Input-1:
------------------
+W
 4 2 3
 2 -1 3 4
 
