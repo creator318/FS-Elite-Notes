@@ -1,3 +1,4 @@
-[[Day 1|Day 1 - Feb 6]]
-[[Day 2|Day 1 - Feb 7]]
 
+```dataview
+list WITHOUT ID "[["+file.name+"|"+file.name+" - "+date+"]]" where regexmatch("Day \d+", file.name)
+```
