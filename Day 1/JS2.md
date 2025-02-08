@@ -8,16 +8,20 @@ Revenue from these high-selling products.
 
 Sample Input: 
 -------------
+```
 5
 Shampoo 5 15
 Soap 2 20
 Toothpaste 3 10
 Conditioner 10 2
 Lotion 8 10
+```
 
 Sample Output: 
 --------------
+```
 155
+```
 
 Explanation:
 ------------

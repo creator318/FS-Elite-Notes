@@ -23,11 +23,15 @@ An integer value.
 
 Sample Input-1:
 ------------------
+```
 RRBRBBRRBR 4
+```
 
 Sample Output-1:
 --------------------
+```
 1
+```
 
 Explanation:
 -------------
@@ -36,11 +40,15 @@ This requires 1 operations.
 
 Sample Input-2:
 ------------------
+```
 BRBRRBB 3
+```
 
 Sample Output-2:
 --------------------
+```
 1
+```
 
 Explanation:
 --------------
@@ -49,11 +57,15 @@ This requires only 1 operation.
 
 Sample Input-3:
 ------------------
+```
 BBBRRBRBRR 5
+```
 
 Sample Output-3:
 --------------------
+```
 2
+```
 
 Explanation:
 --------------

@@ -11,25 +11,30 @@ The subarray. You need to find the sequence with the smallest positive energy.
 If no such sequence exists, return -1.
 
 Input Format:
----------------
+-------------------
 Line-1: Three space separated integers, N, L and R.
 Line-2: N space separated integers, array[].
 
 Output Format:
------------------
+-------------------
 An integer result, smallest positive energy.
 
 Sample Input-1:
+-------------------
+```
 W
 4 2 3
 2 -1 3 4
+```
 
 Sample Output-1:
 -------------------
+```
 12
+```
 
 Explanation:
---------------
+-------------------
 The possible sequences of operations with lengths between l = 2 and r = 3 are:
 
 \[2, -1] (not valid, energy = -2)
@@ -39,15 +44,20 @@ The sequence \[3, 4] produces the smallest positive energy of 12. Hence,
 The output is 12.
 
 Sample Input-2:
------------------
+-------------------
+```
 3 2 3
 1 -3 2
+```
 
 Sample Output-1:
 -------------------
+```
 -1
+```
 
 Explanation:
+-------------------
 No valid sequence produces a positive energy. Thus, the output is -1.
 
 Constraints:

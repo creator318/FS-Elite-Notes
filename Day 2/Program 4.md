@@ -27,12 +27,16 @@ A list of integers, in-order traversal of tree.
 
 Sample Input:
 -------------
+```
 7
 1 2 3 4 5 6 7
+```
 
 Sample Output:
 --------------
+```
 4 2 5 1 6 3 7
+```
 
 
 Explanation:

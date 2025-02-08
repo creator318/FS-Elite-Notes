@@ -23,12 +23,16 @@ An integer, the length of the longest viable set of connected rooms
 
 Sample Input-1:
 ---------------
+```
 8 2 10
 1 2 3 1 2 3 1 2
+```
 
 Sample Output-1:
 ----------------
-5 
+```
+5
+```
 
 Explanation: 
 ------------
@@ -37,12 +41,16 @@ The room sizes 1, 2, and 3 appear at most twice, and the total area is less than
 
 Sample Input-2:
 ---------------
+```
 6 1 3
 1 2 1 2 1 2
+```
 
 Sample Output-2:
 ----------------
+```
 2
+```
 
 Explanation: The longest possible viable set of connected rooms is \[1, 2] since 
 The room sizes 1 and 2 appear at most once, and the total area is 3.

@@ -1,10 +1,10 @@
 #Coding/SlidingWindow 
 
 In a software development company, a team works on various projects over n weeks. 
-The team completes a certain number of tasks tasks[i] each week and dedicates 
-Hours[i] hours of work. Given an integer k, for every consecutive sequence of 
-K weeks (tasks[i], tasks[i+1], ..., tasks[i+k-1] and 
-Hours[i], hours[i+1], ..., hours[i+k-1] for all 0 <= i <= n-k), 
+The team completes a certain number of tasks tasks \[i] each week and dedicates 
+Hours\[i] hours of work. Given an integer k, for every consecutive sequence of 
+K weeks (tasks\[i], tasks\[i+1], ..., tasks\[i+k-1] and 
+Hours\[i], hours\[i+1], ..., hours\[i+k-1] for all 0 <= i <= n-k), 
 They evaluate T, the total number of tasks completed during that sequence 
 Of k weeks, and E, the total hours of work during that sequence of k weeks:
 
@@ -19,17 +19,21 @@ The team has after working for n weeks. Note that the total points can be negati
 
 Sample Input-1:
 -----------------
-N = 5
-Tasks = [10, 20, 30, 40, 50]
-Hours = [30, 20, 10, 30, 40]
-K = 2
-Lower = 35
-Upper = 70
-Work_goal = 45
+```
+5 // n
+10 20 30 40 50 // tasts
+30 20 10 30 40 // hours
+2 // k
+35 // lower
+70 // upper
+45 // goal
+```
 
 Sample Output-1:
 -----------------
+```
 1
+```
 
 Explanation:
 -----------------
@@ -51,17 +55,21 @@ Therefore, the team gains 1 point (0 - 2 + 2 + 1 = 1).
 
 Sample Input-2:
 -----------------
-4	//n
-5 8 10 15
-25 30 20 25
-3	//k
-25	//lower
-40	//upper
-60	//work_goal
+```
+4	// n
+5 8 10 15 // tasks
+25 30 20 25 // hours
+3	// k
+25 // lower
+40 // upper
+60 // goal
+```
 
 Sample Output-2:
 -----------------
+```
 -2
+```
 
 ## Solution: 
 

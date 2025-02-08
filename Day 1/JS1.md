@@ -8,16 +8,20 @@ To find the total profit from these profitable projects.
 
 Sample Input:
 -------------
+```
 5
 ProjectA 500 300
 ProjectB 200 250
 ProjectC 600 400
 ProjectD 150 100
 ProjectE 300 400
+```
 
 Sample Output: 
 --------------
+```
 450
+```
 
 Explanation:
 ------------

@@ -15,11 +15,15 @@ Print the in-order data of the tree.
 
 Sample Input-1:
 ----------------
+```
 1 2 3 -1 -1 4 5
+```
 
 Sample Output-1:
 ----------------
+```
 2 1 4 3 5
+```
 
 Explanation:
 --------------
@@ -33,11 +37,15 @@ Explanation:
 
 Sample Input-2:
 ----------------
+```
 1 2 3 4 5 6 7
+```
 
 Sample Output-2:
 ----------------
+```
 4 2 5 1 6 3 7
+```
 
 Explanation:
 --------------

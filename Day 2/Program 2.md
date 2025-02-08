@@ -33,12 +33,16 @@ An integer array, priority_sums[], of length n - k + 1
 
 Sample Input-1:
 -----------------
+```
 8 5 2 2
 1 2 3 1 2 2 3 4
+```
 
 Sample Output-1:
 --------------------
-\[7, 9, 10, 7]
+```
+[7, 9, 10, 7]
+```
 
 Explanation:
 We calculate the priority-weighted treasure sum for each sub-vault:
@@ -82,12 +86,16 @@ We calculate the priority-weighted treasure sum for each sub-vault:
 
 Sample Input-2:
 -----------------
+```
 6 3 2 1
 5 5 6 7 5 6
+```
 
 Sample Output-2:
 --------------------
-\[16, 13, 13, 13]
+```
+[16, 13, 13, 13]
+```
 
 Constraints:
 ==============
