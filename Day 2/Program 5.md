@@ -90,7 +90,7 @@ class Tree {
                 q.add(curr.l);
             }
             
-            if (i<vals.length && vals[++i] != -1) {
+            if (i<vals.length-1 && vals[++i] != -1) {
                 curr.r = new Node(vals[i]);
                 q.add(curr.r);
             }
