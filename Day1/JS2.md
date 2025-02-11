@@ -1,4 +1,4 @@
-#JS/MapFilterReduce 
+#JS  #JS/MapFilterReduce 
 
 You have an array of product objects, each with name, price, 
 And sold (number of units sold). Use map to calculate the 

@@ -1,4 +1,4 @@
-#Coding/SlidingWindow  
+#Coding  #Coding/SlidingWindow  
 
 The Kingdom of CodeLand has a long bridge made of square tiles, 
 Where each tile is painted either red ('R') or blue ('B'). 

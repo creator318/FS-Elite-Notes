@@ -1,5 +1,5 @@
 ---
-date: {{date:D-MMM-YY}}
+date: 11-Feb-25
 ---
 
 ```dataview
