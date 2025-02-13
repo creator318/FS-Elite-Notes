@@ -1,4 +1,4 @@
-#Coding #Coding/Trees #Coding/Trees/Reconstruction #Coding/Trees/Traversal  #Coding/BFS 
+#Coding/Trees/Reconstruction #Coding/Trees/Traversal  #Coding/BFS 
 
 Construct the binary tree from the given In-order and Pre-order. 
 Find Nodes Between Two Levels in Spiral Order.

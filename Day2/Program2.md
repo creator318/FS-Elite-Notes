@@ -1,4 +1,4 @@
-#Coding  #Coding/SlidingWindow 
+#Coding/SlidingWindow 
 
 You are a treasure hunter exploring an ancient vault filled with 
 Treasure boxes. The vault is represented as an array treasures of 

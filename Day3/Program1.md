@@ -1,4 +1,4 @@
-#Coding  #Coding/SlidingWindow 
+#Coding/SlidingWindow 
 
 In a distant galaxy, there exists an ancient space station covered in a vast 
 Array of digital codes. These codes are believed to hold the key to unlocking 

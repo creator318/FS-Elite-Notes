@@ -1,4 +1,4 @@
-#Coding #Coding/Trees #Coding/Trees/Reconstruction #Coding/Trees/Traversal  #Coding/BFS 
+#Coding/Trees/Reconstruction #Coding/Trees/Traversal  #Coding/BFS 
 
 Given the in-order and post-order traversals of a binary tree, construct 
 The original binary tree. For the given Q number of queries, 

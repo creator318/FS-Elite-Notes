@@ -1,4 +1,4 @@
-#Coding  #Coding/SlidingWindow 
+#Coding/SlidingWindow 
 
 In a software development company, a team works on various projects over n weeks. 
 The team completes a certain number of tasks tasks \[i] each week and dedicates 

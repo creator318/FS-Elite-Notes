@@ -1,4 +1,4 @@
-#CN #CN/Subnetting 
+#CN #CN/CIDR #CN/Subnetting
 
 Write a program that takes an IP address and subnet mask (in CIDR notation, 
 e.g., 192.168.1.1/24) as input and calculates the network and broadcast addresses.

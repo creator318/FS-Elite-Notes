@@ -1,4 +1,4 @@
-#JS  #JS/MapFilterReduce 
+#JS/MapFilterReduce 
 
 Given an array of product objects, each with name, price, 
 And inStock (boolean). Use filter to include only products 

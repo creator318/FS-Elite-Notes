@@ -1,4 +1,4 @@
-#CN #CN/Subnetting 
+#CN/CIDR #CN/Subnetting
 
 Given two IP addresses IP 1 and IP 2, and a subnet mask, your task is to check 
 Whether IP-1 and IP-2 belongs to same host range or not.

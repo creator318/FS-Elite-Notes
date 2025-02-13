@@ -1,4 +1,4 @@
-#JS  #JS/MapFilterReduce
+#JS/MapFilterReduce
 
 You have an array of project objects, each with name, 
 Revenue, and cost. Use filter to include only projects 

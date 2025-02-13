@@ -1,4 +1,4 @@
-#Coding  #Coding/SlidingWindow
+#Coding/SlidingWindow
 
 You are given an integer array nums and two integers l and r. Your task is to 
 Find the minimum positive energy produced by a sequence of operations. 

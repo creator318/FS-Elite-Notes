@@ -1,4 +1,4 @@
-#Coding #Coding/SlidingWindow 
+#Coding/SlidingWindow 
 
 You are a renowned Alchemist exploring a mystical forest teeming with magical plants. 
 Each plant you encounter has a unique Essence Power represented by an integer in 

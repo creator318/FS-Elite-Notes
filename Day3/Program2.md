@@ -1,4 +1,4 @@
-#Coding  #Coding/SlidingWindow 
+#Coding/SlidingWindow 
 
 In a film festival, there is a lineup of movies, each with a rating. The festival 
 Organizer wants to find the maximum total rating of 'k' sequence of movies while 

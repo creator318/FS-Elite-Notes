@@ -1,4 +1,4 @@
-#Coding #Coding/SlidingWindow 
+#Coding/SlidingWindow 
 
 You are an architect designing a street with houses represented as a 0-indexed array 
 House_heights of n integers, where each element represents the height of a house. 

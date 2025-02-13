@@ -1,4 +1,4 @@
-#JS #JS/Promises #JS/Async 
+#JS/Promises #JS/Async 
 
 In this assignment, you will simulate the workflow of a movie booking app that 
 has the following tasks:

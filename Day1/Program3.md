@@ -1,4 +1,4 @@
-#Coding  #Coding/SlidingWindow  
+#Coding/SlidingWindow  
 
 You are an architect tasked with designing a series of connected rooms in a 
 Building. You are given a list of room sizes represented by an integer array 

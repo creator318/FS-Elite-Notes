@@ -1,4 +1,4 @@
-#Coding #Coding/Trees #Coding/Trees/Reconstruction #Coding/BFS
+#Coding/Trees/Reconstruction #Coding/BFS
 
 Construct Tree from the given Level-order and In-order.
 Compute the Depth and Sum of the Deepest nodes in the Binary tree

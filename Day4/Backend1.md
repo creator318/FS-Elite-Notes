@@ -1,4 +1,4 @@
-#JS #JS/Express #Web #Web/Backend
+#JS/Express #Web/Backend
 
 Order Management - using JSON Object
 Objective: Implement the CRUD operations.
