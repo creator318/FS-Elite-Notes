@@ -69,7 +69,7 @@ public class Solution {
     sc.close();
   }
     
-  public static List<Integer> rightView(int[] vals) {
+  private static List<Integer> rightView(int[] vals) {
     Node root = buildTree(vals);
     
     return levelOrder(root);

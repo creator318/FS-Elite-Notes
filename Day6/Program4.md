@@ -107,7 +107,7 @@ public class Solution {
     sc.close();
   }
 
-  public static List<Integer> boundary(int[] vals) {
+  private static List<Integer> boundary(int[] vals) {
     Node root = buildTree(vals);
 
     List<Integer> res = new LinkedList<>() {{ add(root.val); }};
