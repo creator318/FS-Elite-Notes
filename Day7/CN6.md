@@ -28,7 +28,7 @@ Class C
 
 Explanation:
 ------------
-The first octet 192 is within the Multicast range.
+The first octet 192 is within the Class C range.
 
 ## Solution:
 
@@ -39,10 +39,10 @@ The first octet 192 is within the Multicast range.
 typedef union _ip_ {int bin; char seg[4];} ip;
 
 void class(ip addr) {
-  if (addr.seg[0]<=127) printf("Class A");
-  else if (addr.seg[0]<=191) printf("Class B");
-  else if (addr.seg[0]<=223) printf("Class C");
-  else if (addr.seg[0]<=239) printf("Multicast");
+  if ((addr.seg[3] & 0b10000000) == 0) printf("Class A");
+  else if ((addr.seg[3] & 0b11000000) == 0b10000000) printf("Class B");
+  else if ((addr.seg[3] & 0b11100000) == 0b11000000) printf("Class C");
+  else if ((addr.seg[3] & 0b11110000) == 0b11100000) printf("Multicast");
   // else printf("Reserved");
 
   printf("\n");

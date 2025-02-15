@@ -72,7 +72,7 @@ public class Solution {
   private static boolean isSymmetric(int[] vals) {
     Node root = buildTree(vals);
 
-    return isSymmetric(root.l, root.r);
+    return symmetric(root.l, root.r);
   }
 
   private static Node buildTree(int[] vals) {

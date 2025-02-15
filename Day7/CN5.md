@@ -72,22 +72,17 @@ false
 typedef union _ip_ {int bin; char seg[4];} ip;
 
 void check_overlap(ip addr[], int plen[]) {
-  int max = plen[0] > plen[1] ? 0 : 1;
-  int min = max ^ 1;
+  int min = plen[0] < plen[1] ? 0 : 1;
 
   ip mask;
-  mask.bin = 0xffffffff << (32 - plen[max]);
-
-  ip minnetwork;
-  minnetwork.bin = addr[min].bin & mask.bin;
-
-  for (int i = 0; i < abs(plen[0] - plen[1]); i++) {
-    ip network;
-    network.bin = addr[min].bin & mask.bin | i << (32 - plen[max]);
-    if (network.bin == minnetwork.bin) {
-      printf("true\n");
-      return;
-    }
+  mask.bin = 0xffffffff << (32 - plen[min]);
+  
+  ip network[2];
+  for (int i=0; i<2; i++) network[i].bin = addr[i].bin & mask.bin;
+  
+  if (network[0].bin == network[1].bin) {
+    printf("true\n");
+    return;
   }
   printf("false\n");
 }

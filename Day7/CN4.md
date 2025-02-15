@@ -64,7 +64,7 @@ void print_cidr_ip(ip addr, int plen) {
 void subnets(ip addr, int plen, int nnets) {
   int mext = 0;
   while (pow(2, mext)<nnets) mext++;
-  nnets = pow(2, mext);
+  // nnets = pow(2, mext);
 
   plen += mext;
   ip mask;
