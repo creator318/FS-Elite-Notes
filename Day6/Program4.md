@@ -90,7 +90,6 @@ import java.util.*;
 class Node {
   int val;
   Node l=null, r=null;
-  
   Node(int val) {
     this.val = val;
   }

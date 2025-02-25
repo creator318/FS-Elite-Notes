@@ -63,68 +63,67 @@ Explanation:
 import java.util.*;
 
 class Node {
-    int val;
-    Node l=null, r=null;
-    
-    Node(int val) {
-        this.val = val;
-    }
+	int val;
+  Node l=null, r=null;
+  Node(int val) {
+    this.val = val;
+  }
 }
 
 class Tree {
-    static Node root = null;
+  static Node root = null;
     
-    Tree(int[] vals) {
-        if (vals.length == 0) return;
+  Tree(int[] vals) {
+    if (vals.length == 0) return;
         
-        root = new Node(vals[0]);
-        Queue<Node> q = new LinkedList<>();
-        q.add(root);
+    root = new Node(vals[0]);
+    Queue<Node> q = new LinkedList<>();
+    q.add(root);
         
-        int i = 0;
-        while (i<vals.length-1) {
-            Node curr = q.remove();
+    int i = 0;
+    while (i<vals.length-1) {
+      Node curr = q.remove();
             
-            if (vals[++i] != -1) {
-                curr.l = new Node(vals[i]);
-                q.add(curr.l);
-            }
+      if (vals[++i] != -1) {
+        curr.l = new Node(vals[i]);
+        q.add(curr.l);
+      }
             
-            if (i<vals.length-1 && vals[++i] != -1) {
-                curr.r = new Node(vals[i]);
-                q.add(curr.r);
-            }
-        }
+      if (i<vals.length-1 && vals[++i] != -1) {
+        curr.r = new Node(vals[i]);
+        q.add(curr.r);
+      }
     }
+  }
         
-    public List<Integer> inOrder() {
-        List<Integer> res = new LinkedList<>();
-        inOrder(root, res);
-        return res;
-    }
+  public List<Integer> inOrder() {
+    List<Integer> res = new LinkedList<>();
+    inOrder(root, res);
+    return res;
+  }
     
-    private void inOrder(Node root, List<Integer> res) {
-        if (root==null) return;
-        
-        inOrder(root.l, res);
-        res.add(root.val);
-        inOrder(root.r, res);
-    } 
+  private void inOrder(Node root, List<Integer> res) {
+    if (root==null) return;
+    
+    inOrder(root.l, res);
+    res.add(root.val);
+    inOrder(root.r, res);
+  } 
 }
 
 public class Solution {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
 
-        int[] vals = Arrays.stream(sc.nextLine().split(" ")).mapToInt(Integer::parseInt).toArray();
+    int[] vals = Arrays.stream(sc.nextLine().split(" ")).mapToInt(Integer::parseInt).toArray();
 
-        Tree t = new Tree(vals);
-        List<Integer> inOrder = t.inOrder();
+    Tree t = new Tree(vals);
+    List<Integer> inOrder = t.inOrder();
         
-        for (int i: inOrder) System.out.print(i + " ");
-        System.out.println();
+    for (int i: inOrder) System.out.print(i + " ");
+    System.out.println();
 
-        sc.close();
-    }
+    sc.close();
+  }
 }
 ```
