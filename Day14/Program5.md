@@ -1,3 +1,4 @@
+#Coding/TwoPointer 
 
 Trivikram and Vamshi are friends. They need to write N screen-plays, numbered 
 from 1 to N. Each screen-play requires specific number of papers to write.
