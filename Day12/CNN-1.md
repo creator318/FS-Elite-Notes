@@ -1,3 +1,5 @@
+#DL/CNN
+
 ## Implement a convolutional neural network (CNN) in PyTorch that processes 32×32 RGB images and defines a custom loss function. Your implementation must use the exact variable and function names given below so that the autograder can verify your solution automatically.
 
 ```

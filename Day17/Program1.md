@@ -75,7 +75,7 @@ public class Solution {
     sc.close();
   }
 
-  public static List<Integer> removalChoice(int[][] grid) {
+  private static List<Integer> removalChoice(int[][] grid) {
     int[] parent = new int[grid.length+1];
     for (int i=0; i<=grid.length; i++) parent[i] = i;
 
@@ -87,12 +87,12 @@ public class Solution {
     return Arrays.asList(res[1], res[2]);
   }
   
-  public static int find(int x, int[] parent) {
+  private static int find(int x, int[] parent) {
     if (parent[x]!=x) parent[x] = find(parent[x], parent);
     return parent[x];
   }
 
-  public static void union(int x, int y, int[] parent, int[] rank, int[] res) {
+  private static void union(int x, int y, int[] parent, int[] rank, int[] res) {
     int rootX = find(x, parent), rootY = find(y, parent);
 
     if (rootX==rootY) {

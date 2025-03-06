@@ -77,16 +77,20 @@ public class Solution {
 
     int n = sc.nextInt(), l = sc.nextInt();
 
-    ArrayList<int[]> arr = new ArrayList<>();
-    for (int i = 0; i < l; i++) arr.add(new int[] { sc.nextInt(), sc.nextInt(), sc.nextInt() }); 
+    int[][] friends = new int[l][3];
+    for (int i = 0; i < l; i++) {
+      friends[i][0] = sc.nextInt();
+      friends[i][1] = sc.nextInt();
+      friends[i][2] = sc.nextInt();
+    } 
 
-    System.out.println(earliestTime(arr, n, l));
+    System.out.println(earliestTime(friends, n));
    
     sc.close();
   }
   
-  public static int earliestTime(ArrayList<int[]> arr, int n, int l) {
-    Collections.sort(arr, (a, b) -> (a[0] - b[0]));
+  private static int earliestTime(int[][] arr, int n) {
+    Arrays.sort(arr, (a, b) -> (a[0] - b[0]));
 
     int[] parent = new int[n];
     int[] rank = new int[n];
@@ -104,12 +108,12 @@ public class Solution {
     return -1;
   }
   
-  public static int find(int x, int[] parent) {
+  private static int find(int x, int[] parent) {
     if (parent[x]!=x) parent[x] = find(parent[x], parent);
     return parent[x];
   }
 
-  public static void union(int x, int y, int[] parent, int[] rank, Set<Integer> set) {
+  private static void union(int x, int y, int[] parent, int[] rank, Set<Integer> set) {
     int rootX = find(x, parent), rootY = find(y, parent);
     
     if (rootX==rootY) return;

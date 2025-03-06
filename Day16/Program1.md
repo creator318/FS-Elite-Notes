@@ -68,7 +68,7 @@ public class Solution {
     sc.close();
   }
   
-  public static int countRegions(int[][] grid, int n, int m) {
+  private static int countRegions(int[][] grid, int n, int m) {
     int[] parent = new int[n];
     for (int i=0; i<n; i++) parent[i] = i;
 
@@ -80,12 +80,12 @@ public class Solution {
     return set.size();
   }
 
-  public static int find(int x, int[] parent) {
+  private static int find(int x, int[] parent) {
     if (parent[x]!=x) parent[x] = find(parent[x], parent);
     return parent[x];
   }  
 
-  public static void union(int x, int y, int[] parent, int[] rank) {
+  private static void union(int x, int y, int[] parent, int[] rank) {
     int rootX = find(x, parent), rootY = find(y, parent);
 
     if (rootX == rootY) return;

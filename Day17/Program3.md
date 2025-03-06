@@ -84,7 +84,7 @@ public class Solution {
     sc.close();
   }
 
-  public static boolean isSwitchedOn(boolean[][] grid) {
+  private static boolean isSwitchedOn(boolean[][] grid) {
     for (int i=0; i<grid.length; i++)
       for (int j=0; j<grid[0].length; j++)
         if (grid[i][j]) return false;
@@ -92,7 +92,7 @@ public class Solution {
     return true;
   }
 
-  public static boolean canToggle(boolean[][] grid) {
+  private static boolean canToggle(boolean[][] grid) {
     for (int i=0; i<grid.length; i++)
       if (grid[i][0])
         for (int j=0; j<grid[0].length; j++)

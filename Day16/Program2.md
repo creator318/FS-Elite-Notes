@@ -79,7 +79,7 @@ public class Solution {
     sc.close();
   }
 
-  public static boolean isTransitivityValid(String[] input) {
+  private static boolean isTransitivityValid(String[] input) {
     Map<Character, Character> parent = new HashMap<>();
     
     ArrayList<String> notEqual = new ArrayList<>();
@@ -96,12 +96,12 @@ public class Solution {
     return true;
   }
 
-public static char find(char ch, Map<Character, Character> parent) {
-  if (parent.get(ch)!=ch) parent.put(ch, find(parent.get(ch), parent));
-  return parent.get(ch);
-}
+  private static char find(char ch, Map<Character, Character> parent) {
+    if (parent.get(ch)!=ch) parent.put(ch, find(parent.get(ch), parent));
+    return parent.get(ch);
+  }
 
-  public static void union(char ch1, char ch2, Map<Character, Character> parent) {
+  private static void union(char ch1, char ch2, Map<Character, Character> parent) {
     char rootCh1 = find(ch1, parent), rootCh2 = find(ch2, parent);
     if (rootCh1 == rootCh2) return;
 
