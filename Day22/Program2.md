@@ -1,3 +1,5 @@
+#Coding/BitManipulation 
+
 Imagine a mystical garden with eight enchanted flower beds arranged in a straight line. In each bed, a magical blossom can either be in full bloom (represented by 1) or remain dormant (represented by 0). 
 
 Every day, the garden performs its magic ritual: 

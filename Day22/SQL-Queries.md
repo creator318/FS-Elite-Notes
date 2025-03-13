@@ -18,7 +18,6 @@
 | location | varchar(50) | NO   |     | NULL    |       |
 
 #### Schema: emp
-
 | Field    | Type          | Null | Key | Default | Extra |
 | -------- | ------------- | ---- | --- | ------- | ----- |
 | empno    | int           | NO   | PRI | NULL    |       |
@@ -31,7 +30,6 @@
 | deptno   | int           | YES  | MUL | NULL    |       | 
 
 #### Schema: salgrade
-
 | Field | Type          | Null | Key | Default | Extra |
 | ----- | ------------- | ---- | --- | ------- | ----- |
 | grade | int           | NO   | PRI | NULL    |       |
