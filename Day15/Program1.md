@@ -56,12 +56,12 @@ public class Solution {
     
     String s = sc.next();
     
-    System.out.println(transformablrPalindrome(s));
+    System.out.println(transformablePalindrome(s));
     
     sc.close();
   }
   
-  private static boolean transformablrPalindrome(String s) {
+  private static boolean transformablePalindrome(String s) {
     Map<Character, Integer> map = new HashMap<>();
     
     for (int i=0; i<s.length(); i++) map.put(s.charAt(i), map.getOrDefault(s.charAt(i), 0)+1);

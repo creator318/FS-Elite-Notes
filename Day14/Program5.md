@@ -16,7 +16,7 @@ Your task is to return the number of times they have to refill to write all the 
 
 Constraint:
 -----------
-max(screen-play) < T,V < 10^9
+max(screen-play) < T,V < $10^9$
 
 
 Input Format:

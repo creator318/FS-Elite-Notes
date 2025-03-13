@@ -119,16 +119,8 @@ public class Solution {
   }
 
   private static List<Integer> levelOrder(Node root) {
-    List<Integer> res = new LinkedList<>() {
-      {
-        add(root.val);
-      }
-    };
-    Queue<Node> q = new LinkedList<>() {
-      {
-        add(root);
-      }
-    };
+    List<Integer> res = new LinkedList<>() {{ add(root.val); }};
+    Queue<Node> q = new LinkedList<>() {{ add(root); }};
 
     while (!q.isEmpty()) {
       Node curr = q.remove();

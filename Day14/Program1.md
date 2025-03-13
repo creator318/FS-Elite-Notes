@@ -65,8 +65,8 @@ For plots 3 to 6: \[1,2,3,4] → 4 unique colors
 
 Constraints:
 ------
-- 1 <= k <= garden.length <= 10^5
-- 1 <= garden\[i] <= 10^5
+- 1 <= k <= garden.length <= $10^5$
+- 1 <= garden\[i] <= $10^5$
 
 ## Solution:
 

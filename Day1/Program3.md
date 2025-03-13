@@ -57,10 +57,10 @@ The room sizes 1 and 2 appear at most once, and the total area is 3.
 
 Constraints:
 ------------
-1 <= roomSizes. Length <= 10^5
-1 <= roomSizes\[i] <= 10^4 where roomSizes\[i] is the size of the i-th room.
+1 <= roomSizes. Length <= $10^5$
+1 <= roomSizes\[i] <= $10^4$ where roomSizes\[i] is the size of the i-th room.
 1 <= maxFrequency <= roomSizes. Length
-1 <= maxArea <= 10^9
+1 <= maxArea <= $10^9$
 
 ## Solution: 
 

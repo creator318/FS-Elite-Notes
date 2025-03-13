@@ -72,8 +72,8 @@ Sample Output-2:
 Constraints:
 ========
 1. N == house_heights. Length == visibility_mask. Length
-2. 1 <= n <= 10\^5
-3. 0 <= house_heights\[i] <= 10\^5
+2. 1 <= n <= $10^5$
+3. 0 <= house_heights\[i] <= $10^5$
 4. Visibility_mask\[i] is either 0 or 1
 5. 0 <= k <= n
 

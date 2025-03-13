@@ -1,3 +1,4 @@
+#Coding/TwoPointer #Coding/Strings 
 
 "Emphatic Pronunciation" of a given word is where we take the word and replicate some of the letter to emphasize their impact.
 
@@ -51,35 +52,39 @@ Sample Output-2:
 import java.util.*;
 
 public class Solution {
-  public static void main(String [] args){
+  public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
 
     String em = sc.nextLine();
-    String words [] = sc.nextLine().split(" ");
+    String words[] = sc.nextLine().split(" ");
 
-    System.out.println(countMatching(em,words));
+    System.out.println(countExpressive(em, words));
 
     sc.close();
   }
 
-  static int countMatching(String em, String words[]){
-    Map<Character,Integer> map = new HashMap<>();
-    Map<Character,Integer> freq = new HashMap<>();
-
-    for (char ch: em.toCharArray()) map.put(ch, map.getOrDefault(ch, 0)+1);
-
+  private static int countExpressive(String em, String[] words) {
     int count = 0;
-    outer : for (String word : words) {
-      freq.clear();
-      for (char ch : word.toCharArray())
-        if (map.containsKey(ch)) {
-          freq.put(ch, freq.getOrDefault(ch, 0)+1);
-          if(freq.get(ch)>map.get(ch)) continue outer;
-        } else continue outer;
-      count++;
-    }
-
+    for (String word : words) if (isEmpathetic(em, word)) count++;
     return count;
+  }
+
+  private static boolean isEmpathetic(String em, String word) {
+    int i=0, j=0;
+    while (i<em.length() && j<word.length()) {
+      if (em.charAt(i)==word.charAt(j)) {
+        int emlen = getRepeatedLength(em, i), wlen = getRepeatedLength(word, j);
+        if ((emlen<3 && emlen!=wlen) || (emlen>=3 && emlen<wlen)) return false;
+        i += emlen; j += wlen;
+      } else return false;
+    }
+    return i==em.length() && j==word.length();
+  }
+
+  private static int getRepeatedLength(String str, int i) {
+    int j = i;
+    while (j < str.length() && str.charAt(j) == str.charAt(i)) j++;
+    return j - i;
   }
 }
 ```

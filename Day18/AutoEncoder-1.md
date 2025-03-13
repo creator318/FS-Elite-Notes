@@ -43,7 +43,7 @@ import torch
 from torch import nn, optim
 ```
 
-## Model
+## AutoEncoder
 
 ```python
 class Autoencoder(nn.Module):
@@ -79,12 +79,10 @@ class Autoencoder(nn.Module):
         return decoded
 ```
 
-## Define Optimizer and Loss function criteria
+## Define loss function and optimizer
 
 ```python
-# Define loss function and optimizer
 student_model = Autoencoder()
-# initialize the 'criterion' to apply the loss and 'optimizer' for the optimzation.
 criterion = nn.MSELoss();
 optimizer = optim.Adam(student_model.parameters())
 ```

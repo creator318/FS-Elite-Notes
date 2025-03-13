@@ -7,7 +7,7 @@ While following the forest rules:
  1. Each food location contains only one unit of food.
  2. The bird can carry only one unit of food at a time.
  3. The bird must deposit food into a nest before collecting more.
- 4. Distance Calculation: The time taken to fly between two locations using the Euclidean distance formula: d = sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}
+ 4. Distance Calculation: The time taken to fly between two locations using the Euclidean distance formula: d = $\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$
  5. The total time spent is the sum of:
 	  - Travel time between locations.
 	 - Fixed time to deposit food in a nest (each nest has a different deposit time).
