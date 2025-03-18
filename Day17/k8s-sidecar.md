@@ -1,4 +1,4 @@
-#SE/Kubernetes #Design/Sidecar
+#SE/Kubernetes #ProductDesign/Sidecar
 
 # Kubernetes Deployment Guide for Flask App and Logger
 

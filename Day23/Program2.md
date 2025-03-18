@@ -1,4 +1,4 @@
-#Coding/Graphs/Representation
+#Coding/DFS
 
 Imagine you're playing an adventure video game with a total of 'n' quests, numbered from 0 to n–1. Some quests have special unlock conditions: certain quests must be completed before others can be attempted. You’re provided with 'm' questDependencies where each element questDependencies\[i] = \[$a_i$, $b_i$] means that you must finish quest $a_i$ before you can start quest $b_i$.
 

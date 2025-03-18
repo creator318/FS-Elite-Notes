@@ -1,4 +1,4 @@
-#CyberSecurity/Command-Injection #CyberSecurity/Broken-Authentication
+#CyberSecurity/Command-Injection #CyberSecurity/Broken-Access-Control
 
 ### 1. Given the following vulnerable code, what type of attack can be performed?
 ```js

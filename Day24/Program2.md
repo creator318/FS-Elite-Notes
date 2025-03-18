@@ -106,7 +106,7 @@ public class Solution {
     return twoSumBSTs(roots[0], roots[1], target);
   }
 
-    private static Node buildBSTree(int[] vals) {
+  private static Node buildBSTree(int[] vals) {
     if (vals.length == 0) return null;
     
     Node root = new Node(vals[0]);
