@@ -113,7 +113,7 @@ public class Solution {
     visited[r][c] = true;
     for (int[] dir: dirs) {
       int nr = r+dir[0], nc = c+dir[1];
-      if (nr>=0 && nr<map.length && nc>=0 && nc<map[0].length && map[nr][nc]==path.charAt(pos))
+      if (nr>=0 && nr<map.length && nc>=0 && nc<map[0].length && !visited[nr][nc] && map[nr][nc]==path.charAt(pos))
         if (dfs(map, path, visited, nr, nc, pos+1)) return true;
     }
     
