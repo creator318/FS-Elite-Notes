@@ -68,35 +68,35 @@ Constraints:
 import java.util.*;
 
 public class Solution {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
         
-        int n = sc.nextInt(), mf = sc.nextInt(), ma = sc.nextInt();
-        int[] arr = new int[n];
-        
-        for (int i=0; i<n; i++) arr[i] = sc.nextInt();
-        
-        System.out.println(slide(arr, mf, ma));
-        
-        sc.close();
-    }
+    int n = sc.nextInt(), mf = sc.nextInt(), ma = sc.nextInt();
+    int[] arr = new int[n];
     
-    private static int slide(int[] arr, int mf, int ma) {
-        Map<Integer, Integer> map = new HashMap<>();
+    for (int i=0; i<n; i++) arr[i] = sc.nextInt();
         
-        int a=0, l=0, r=0, max=0;
-        while (r<arr.length) {
-            map.put(arr[r], map.getOrDefault(arr[r], 0) + 1);
-            a += arr[r];
-            while ((map.get(arr[r]) > mf || a>ma) && l<=r) {
-                map.put(arr[l], map.get(arr[l]) - 1);
-                a -= arr[l++];
-            }
-            r++;
-            max = Math.max(max, r-l);
-        }
+    System.out.println(slide(arr, mf, ma));
         
-        return max;
+    sc.close();
+  }
+    
+  private static int slide(int[] arr, int mf, int ma) {
+    Map<Integer, Integer> map = new HashMap<>();
+        
+    int a=0, l=0, r=0, max=0;
+    while (r<arr.length) {
+      map.put(arr[r], map.getOrDefault(arr[r], 0) + 1);
+      a += arr[r];
+      while ((map.get(arr[r]) > mf || a>ma) && l<=r) {
+        map.put(arr[l], map.get(arr[l]) - 1);
+        a -= arr[l++];
+      }
+      r++;
+      max = Math.max(max, r-l);
     }
+        
+    return max;
+  }
 }
 ```

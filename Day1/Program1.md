@@ -73,45 +73,45 @@ Constraints:
 import java.util.*;
 
 public class Solution {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
         
-        int n = sc.nextInt();
-        int l = sc.nextInt(), r = sc.nextInt();
+    int n = sc.nextInt();
+    int l = sc.nextInt(), r = sc.nextInt();
         
-        int arr[] = new int[n];
-        for (int i=0; i<n; i++) arr[i] = sc.nextInt();
+    int arr[] = new int[n];
+    for (int i=0; i<n; i++) arr[i] = sc.nextInt();
         
-        System.out.println(solve(arr, l, r));
+    System.out.println(solve(arr, l, r));
         
-        sc.close();
-    }
+    sc.close();
+  }
     
-    private static long solve(int[] arr, int l, int r) {
-    		long min = Long.MAX_VALUE;
-    		
-        for (int i=l; i<=r; i++) {
-            long p=1;
-            int prev=0, cz=0;
-            for (int j=0; j<i; j++) {
-                if (arr[j]==0) cz++;
-                else p *= arr[j];
-            }
+  private static long solve(int[] arr, int l, int r) {
+    long min = Long.MAX_VALUE;
+    
+    for (int i=l; i<=r; i++) {
+    	long p=1;
+    	int prev=0, cz=0;
+    	for (int j=0; j<i; j++) {
+        if (arr[j]==0) cz++;
+        else p *= arr[j];
+    	}
 
-            if (p>0 && cz==0) min = Math.min(p, min);
+    	if (p>0 && cz==0) min = Math.min(p, min);
 
-            for(int j=i; j<arr.length; j++){
-                if (arr[prev] != 0) p /= arr[prev];
-                else cz--;
+    	for(int j=i; j<arr.length; j++){
+        if (arr[prev] != 0) p /= arr[prev];
+        else cz--;
 
-                if (arr[j]==0) cz++;
-                else p *= arr[j];
+        if (arr[j]==0) cz++;
+        else p *= arr[j];
                 
-                if (p>0 && cz==0) min = Math.min(p, min);
-                prev += 1;
-            }
-        }
-        return min == Long.MAX_VALUE ? -1 : min;
+        if (p>0 && cz==0) min = Math.min(p, min);
+        prev += 1;
+    	}
     }
+    return min == Long.MAX_VALUE ? -1 : min;
+  }
 }
 ```

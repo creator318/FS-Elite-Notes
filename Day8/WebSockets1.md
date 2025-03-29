@@ -44,8 +44,9 @@ Note:
 ## Solution:
 
 ```js
-const ws = require('ws');
-const server = new ws.Server({port: 8080});
+import { WebSocketServer } from "ws";
+
+const server = new WebSocketServer({ port: 8080 });
 
 let employees = [];
 server.on("connection",(socket)=>{

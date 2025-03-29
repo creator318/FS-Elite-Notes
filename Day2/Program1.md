@@ -77,47 +77,47 @@ Sample Output-2:
 import java.util.*;
 
 public class Solution {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
         
-        int n = sc.nextInt();
+    int n = sc.nextInt();
         
-        int tasks[] = new int[n];
-        for (int i=0; i<n; i++) tasks[i] = sc.nextInt();
+    int tasks[] = new int[n];
+    for (int i=0; i<n; i++) tasks[i] = sc.nextInt();
         
-        int hours[] = new int[n];
-        for (int i=0; i<n; i++) hours[i] = sc.nextInt();
+    int hours[] = new int[n];
+    for (int i=0; i<n; i++) hours[i] = sc.nextInt();
         
-        int k = sc.nextInt();
-        int tl = sc.nextInt(), tu = sc.nextInt();
-        int wg = sc.nextInt();
+    int k = sc.nextInt();
+    int tl = sc.nextInt(), tu = sc.nextInt();
+    int wg = sc.nextInt();
         
-        System.out.println(slide(tasks, hours, k, tl, tu, wg));
+    System.out.println(slide(tasks, hours, k, tl, tu, wg));
         
-        sc.close();
-    }
+    sc.close();
+  }
     
-    private static int slide(int tasks[], int hours[], int k, int tl, int tu, int wg) {
-        int score = 0;
-        int T=0, E=0;
+  private static int slide(int tasks[], int hours[], int k, int tl, int tu, int wg) {
+    int score = 0;
+    int T=0, E=0;
         
-        for (int i=0; i<k; i++) {
-            T += tasks[i];
-            E += hours[i];
-        }
-        
-        for (int i=0; i<=tasks.length-k; i++) {
-            if (T<tl && E>=wg) score -= 2;
-            else if (T<tl && E<wg) score -= 1;
-            else if (T>=tu && E>=wg) score += 1;
-            else if (T>=tu && E<wg) score += 2;
-            
-            if (i==tasks.length-k) continue;
-            T += tasks[i+k] - tasks[i];
-            E += hours[i+k] - hours[i];
-        }
-        
-        return score;
+    for (int i=0; i<k; i++) {
+      T += tasks[i];
+      E += hours[i];
     }
+        
+    for (int i=0; i<=tasks.length-k; i++) {
+      if (T<tl && E>=wg) score -= 2;
+      else if (T<tl && E<wg) score -= 1;
+      else if (T>=tu && E>=wg) score += 1;
+      else if (T>=tu && E<wg) score += 2;
+            
+      if (i==tasks.length-k) continue;
+      T += tasks[i+k] - tasks[i];
+      E += hours[i+k] - hours[i];
+    }
+        
+    return score;
+  }
 }
 ```

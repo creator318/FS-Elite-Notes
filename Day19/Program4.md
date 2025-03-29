@@ -56,7 +56,7 @@ Only one sum sub-arrays i.e. 0.
 ```java
 import java.util.*;
 
-public class OrOnSubarraySum {
+public class Solution {
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
 

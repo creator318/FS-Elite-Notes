@@ -81,33 +81,6 @@ Thus, there are 6 valid ways to transfer the cargo.
 import java.util.*;
 
 public class Solution {
-  public static int numWays(int[] X, int[] Y) {
-    int res[] = { 0 };
-    for (int i=0; i<X.length; i++) {
-      int last = X[i] + Y[0];
-      backtrack(X, Y, res, i+1, 1, 1, last);
-    }
-    return res[0];
-  }
-
-  public static void backtrack(int[] X, int Y[], int[] res, int ix, int iy, int count, int last) {
-    if (count==Y.length) {
-      res[0]++;
-      return;
-    }
-
-    if (ix>=X.length || iy>=Y.length) {
-      if ((count) == Y.length) res[0]++;
-      return;
-    }
-    
-    for (int i=ix; i<X.length; i++) {
-      if (last<=Y[iy]+X[i]) {
-        backtrack(X, Y, res, i+1, iy+1, count+1, Y[iy]+X[i]);
-      }
-    }
-  }
-
   public static void main(String args[]) {
     Scanner sc = new Scanner(System.in);
     
@@ -123,6 +96,33 @@ public class Solution {
     System.out.println(numWays(X, Y));
     
     sc.close();
+  }
+  
+  private static int numWays(int[] X, int[] Y) {
+    int res[] = { 0 };
+    for (int i=0; i<X.length; i++) {
+      int last = X[i] + Y[0];
+      backtrack(X, Y, res, i+1, 1, 1, last);
+    }
+    return res[0];
+  }
+
+  private static void backtrack(int[] X, int Y[], int[] res, int ix, int iy, int count, int last) {
+    if (count==Y.length) {
+      res[0]++;
+      return;
+    }
+
+    if (ix>=X.length || iy>=Y.length) {
+      if ((count) == Y.length) res[0]++;
+      return;
+    }
+    
+    for (int i=ix; i<X.length; i++) {
+      if (last<=Y[iy]+X[i]) {
+        backtrack(X, Y, res, i+1, iy+1, count+1, Y[iy]+X[i]);
+      }
+    }
   }
 }
 ```

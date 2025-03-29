@@ -100,56 +100,56 @@ Constraints:
 import java.util.*;
 
 public class Solution {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
         
-        int n = sc.nextInt(), k = sc.nextInt(), x = sc.nextInt(), f = sc.nextInt();
-        int[] boxes = new int[n];
-        for (int i=0; i<n; i++) boxes[i] = sc.nextInt();
+    int n = sc.nextInt(), k = sc.nextInt(), x = sc.nextInt(), f = sc.nextInt();
+    int[] boxes = new int[n];
+    for (int i=0; i<n; i++) boxes[i] = sc.nextInt();
         
-        System.out.println(Arrays.toString(slide(boxes, k, x, f)));
+    System.out.println(Arrays.toString(slide(boxes, k, x, f)));
         
-        sc.close();
-    }
+    sc.close();
+  }
     
-    private static int[] slide(int boxes[], int k, int x, int f) {
-        Map<Integer, Integer> map = new HashMap<>();
+  private static int[] slide(int boxes[], int k, int x, int f) {
+    Map<Integer, Integer> map = new HashMap<>();
         
-        for (int i=0; i<k; i++) {
-            map.put(boxes[i], map.getOrDefault(boxes[i], 0) + 1);
-        }
+    for (int i=0; i<k; i++) {
+      map.put(boxes[i], map.getOrDefault(boxes[i], 0) + 1);
+    }
 
-        int res[] = new int[boxes.length-k+1];
+    int res[] = new int[boxes.length-k+1];
         
-        for (int i=0; i<=boxes.length-k; i++) {
-            res[i] = calcScore(map, x, f);
+    for (int i=0; i<=boxes.length-k; i++) {
+      res[i] = calcScore(map, x, f);
             
-            if (i == boxes.length-k) continue;
-            map.put(boxes[i], map.get(boxes[i]) - 1);
-            map.put(boxes[i+k], map.getOrDefault(boxes[i+k], 0) + 1);
-        }
-        
-        return res;
+      if (i == boxes.length-k) continue;
+      map.put(boxes[i], map.get(boxes[i]) - 1);
+      map.put(boxes[i+k], map.getOrDefault(boxes[i+k], 0) + 1);
     }
+        
+    return res;
+  }
     
-    private static int calcScore(Map<Integer, Integer> map, int x, int f) {
-        double res = 0;
+  private static int calcScore(Map<Integer, Integer> map, int x, int f) {
+    double res = 0;
         
-        if (map.size()>x) {
-            Queue<double[]> pq = new PriorityQueue<>((a,b) -> Double.compare(b[1],a[1]));
+    if (map.size()>x) {
+      Queue<double[]> pq = new PriorityQueue<>((a,b) -> Double.compare(b[1],a[1]));
             
-            for (Map.Entry<Integer, Integer> e: map.entrySet()) 
-                pq.add(new double[] {e.getKey(), e.getValue() * Math.pow(e.getKey(), f)}); 
-            for (int i=0; i<x; i++) {
-                double[] e = pq.poll();
-                res += e[0] * map.get((int)e[0]);
-            }
-        } else {
-            for (Map.Entry<Integer, Integer> e: map.entrySet()) 
-                res += e.getKey() * e.getValue();
-        }
-        
-        return (int)res;
+      for (Map.Entry<Integer, Integer> e: map.entrySet()) 
+      	pq.add(new double[] {e.getKey(), e.getValue() * Math.pow(e.getKey(), f)}); 
+      for (int i=0; i<x; i++) {
+        double[] e = pq.poll();
+        res += e[0] * map.get((int)e[0]);
+      }
+    } else {
+      for (Map.Entry<Integer, Integer> e: map.entrySet()) 
+        res += e.getKey() * e.getValue();
     }
+        
+    return (int)res;
+  }
 }
 ```

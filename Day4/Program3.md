@@ -76,40 +76,40 @@ The 3 rd smallest elixir potency is 4.
 import java.util.*;
 
 public class Solution {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
         
-        int n=sc.nextInt(), k=sc.nextInt(), m=sc.nextInt();
-        int[] arr = new int[n];
-        for (int i=0; i<n; i++) arr[i] = sc.nextInt();
+    int n=sc.nextInt(), k=sc.nextInt(), m=sc.nextInt();
+    int[] arr = new int[n];
+    for (int i=0; i<n; i++) arr[i] = sc.nextInt();
         
-        System.out.println(slide(arr, k, m));
+    System.out.println(slide(arr, k, m));
         
-        sc.close();
-    }
+    sc.close();
+  }
     
-    private static int slide(int[] arr, int k, int m) {
-        Queue<Integer> q = new PriorityQueue<>();
+  private static int slide(int[] arr, int k, int m) {
+    Queue<Integer> q = new PriorityQueue<>();
         
-        int curr = 0;
-        for (int i=0; i<m; i++) {
-            curr += arr[i];
-        }
-        
-        for (int i=0; i<=arr.length-m; i++) {
-            int currIter = curr;
-            for (int j=i+m-1; j<arr.length; j++) {
-                q.add(currIter);
-                if (j<arr.length-1) currIter += arr[j+1];
-            }
-            
-            if (i==arr.length-m) continue;
-            curr += arr[i+m] - arr[i];
-        }
-
-        int res=0;
-        for (int i=0; i<k; i++) res=q.remove();
-        return res;
+    int curr = 0;
+    for (int i=0; i<m; i++) {
+      curr += arr[i];
     }
+        
+    for (int i=0; i<=arr.length-m; i++) {
+      int currIter = curr;
+      for (int j=i+m-1; j<arr.length; j++) {
+        q.add(currIter);
+        if (j<arr.length-1) currIter += arr[j+1];
+      }
+            
+      if (i==arr.length-m) continue;
+        curr += arr[i+m] - arr[i];
+    }
+
+    int res=0;
+    for (int i=0; i<k; i++) res=q.remove();
+    return res;
+  }
 }
 ```

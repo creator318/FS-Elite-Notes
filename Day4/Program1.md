@@ -83,51 +83,51 @@ Constraints:
 import java.util.*;
 
 public class Solution {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
         
-        int n = sc.nextInt(), k = sc.nextInt();
+    int n = sc.nextInt(), k = sc.nextInt();
         
-        int[] heights = new int[n];
+    int[] heights = new int[n];
         
-        for (int i=0; i<n; i++) heights[i] = sc.nextInt();
+    for (int i=0; i<n; i++) heights[i] = sc.nextInt();
         
-        boolean[] visibility = new boolean[n];
-        for (int i=0; i<n; i++) visibility[i] = sc.nextInt() == 1;
+    boolean[] visibility = new boolean[n];
+    for (int i=0; i<n; i++) visibility[i] = sc.nextInt() == 1;
         
-        for (int i: slide(heights, visibility, k)) System.out.print(i + " ");
-        System.out.println();
+    for (int i: slide(heights, visibility, k)) System.out.print(i + " ");
+    System.out.println();
         
-        sc.close();
-    }
+    sc.close();
+  }
     
-    private static int[] slide(int[] heights, boolean[] visibility, int k) {
-        int[] res = new int[heights.length];
-        Arrays.fill(res, -1);
+  private static int[] slide(int[] heights, boolean[] visibility, int k) {
+    int[] res = new int[heights.length];
+    Arrays.fill(res, -1);
         
-        int curr=0, size=0;
-        for (int i=0; i<=Math.min(2*k, heights.length-1); i++) {
-            if (visibility[i]) {
-                curr+=heights[i];
-                size++;
-            }
-        }
-        
-        for (int i=k; i<heights.length-k; i++) {
-            if (size != 0) res[i] = (int)curr / size;
-            
-            if (i==heights.length-k-1) continue;
-            if (visibility[i-k]) {
-                curr -= heights[i-k];
-                size--;
-            }
-            if (visibility[i+k+1]) {
-                curr += heights[i+k+1];
-                size++;
-            }
-        }
-        
-        return res;
+    int curr=0, size=0;
+    for (int i=0; i<=Math.min(2*k, heights.length-1); i++) {
+      if (visibility[i]) {
+        curr+=heights[i];
+        size++;
+      }
     }
+        
+    for (int i=k; i<heights.length-k; i++) {
+      if (size != 0) res[i] = (int)curr / size;
+            
+      if (i==heights.length-k-1) continue;
+      if (visibility[i-k]) {
+        curr -= heights[i-k];
+        size--;
+      }
+      if (visibility[i+k+1]) {
+        curr += heights[i+k+1];
+        size++;
+      }
+    }
+        
+    return res;
+  }
 }
 ```

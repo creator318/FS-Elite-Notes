@@ -65,42 +65,42 @@ Are the same, resulting in a difference of 0.
 import java.util.*;
 
 public class Solution {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner (System.in);
+  public static void main(String[] args) {
+    Scanner sc = new Scanner (System.in);
         
-        int n = sc.nextInt(), l = sc.nextInt(), r = sc.nextInt();
-        int arr[] = new int[n];
-        for (int i=0; i<n; i++) arr[i] = sc.nextInt();
+    int n = sc.nextInt(), l = sc.nextInt(), r = sc.nextInt();
+    int arr[] = new int[n];
+    for (int i=0; i<n; i++) arr[i] = sc.nextInt();
         
-        System.out.println(slide(arr, l, r));
+    System.out.println(slide(arr, l, r));
         
-        sc.close();
-    }
+    sc.close();
+  }
     
-    private static int slide(int arr[], int l, int r) {
-        int score = Integer.MIN_VALUE;
+  private static int slide(int arr[], int l, int r) {
+    int score = Integer.MIN_VALUE;
         
-        Queue<Integer> min = new PriorityQueue<>();
-        Queue<Integer> max = new PriorityQueue<>(Collections.reverseOrder());
+    Queue<Integer> min = new PriorityQueue<>();
+    Queue<Integer> max = new PriorityQueue<>(Collections.reverseOrder());
         
         // Max volatility will only be for the largest array size
-        for (int i=0; i<r; i++) {
-            min.add(arr[i]);
-            max.add(arr[i]);
-        }
-        
-        for (int i=0; i<=arr.length-r; i++) {
-            score = Math.max(score, max.peek() - min.peek());
-        
-            if (i==arr.length-r) continue;
-            
-            if (max.peek()==arr[i]) max.remove();
-            max.add(arr[i+r]);
-            if (min.peek()==arr[i]) min.remove();
-            min.add(arr[i+r]);
-        }
-        
-        return score;
+    for (int i=0; i<r; i++) {
+      min.add(arr[i]);
+      max.add(arr[i]);
     }
+        
+    for (int i=0; i<=arr.length-r; i++) {
+      score = Math.max(score, max.peek() - min.peek());
+        
+      if (i==arr.length-r) continue;
+            
+      if (max.peek()==arr[i]) max.remove();
+      max.add(arr[i+r]);
+      if (min.peek()==arr[i]) min.remove();
+      min.add(arr[i+r]);
+    }
+        
+    return score;
+  }
 }
 ```

@@ -79,29 +79,29 @@ This requires 2 operations.
 import java.util.*;
 
 public class Solution {
-    public static void main(String args[]) {
-        Scanner sc = new Scanner(System.in);
+  public static void main(String args[]) {
+    Scanner sc = new Scanner(System.in);
         
-        String s = sc.next();
-        int n = sc.nextInt();
+    String s = sc.next();
+    int n = sc.nextInt();
 
-        System.out.println(slide(s, n));
+    System.out.println(slide(s, n));
         
-        sc.close();
-    }
+    sc.close();
+  }
     
-    private static int slide(String s, int n) {
-        int c=n;
-        for (int i=0; i<n; i++) if (s.charAt(i) == 'B') c--;
+  private static int slide(String s, int n) {
+    int c=n;
+    for (int i=0; i<n; i++) if (s.charAt(i) == 'B') c--;
         
-        int min = c;
-        for (int i=0; i<s.length()-n; i++) {
-            c += s.charAt(i) == 'B' ? 1 : 0;
-            c -= s.charAt(i+n) == 'B' ? 1 : 0;
+    int min = c;
+    for (int i=0; i<s.length()-n; i++) {
+      c += s.charAt(i) == 'B' ? 1 : 0;
+      c -= s.charAt(i+n) == 'B' ? 1 : 0;
             
-            min = Math.min(c, min);
-        }
-        return min;
+      min = Math.min(c, min);
     }
-}
+  	return min;
+  }
+}	
 ```

@@ -69,41 +69,41 @@ Sample Output-2:
 import java.util.*;
 
 public class Solution {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
         
-        String key = sc.next();
-        int len = sc.nextInt();
+    String key = sc.next();
+    int len = sc.nextInt();
         
-        System.out.println(slide(key, len));
+    System.out.println(slide(key, len));
         
-        sc.close();
-    }
+    sc.close();
+  }
     
-    private static int slide(String key, int len) {
-        int res;
+  private static int slide(String key, int len) {
+    int res;
         
-        int curr=0;
-        for (int i=0; i<len; i++) curr = curr*10 + (key.charAt(i) - '0');
+    int curr=0;
+    for (int i=0; i<len; i++) curr = curr*10 + (key.charAt(i) - '0');
 
-        int count = 0;
-        for (int i=0; i<=key.length()-len; i++) {
-            if (isPrime(curr) && Integer.parseInt(key)%curr==0) count++;
+    int count = 0;
+    for (int i=0; i<=key.length()-len; i++) {
+      if (isPrime(curr) && Integer.parseInt(key)%curr==0) count++;
             
-            if (i==key.length()-len) continue;
-            curr = curr*10 + (key.charAt(i+len) - '0');
-            curr %= Math.pow(10, len);
-        }
+      if (i==key.length()-len) continue;
+      curr = curr*10 + (key.charAt(i+len) - '0');
+      curr %= Math.pow(10, len);
+    }
         
-        return count;
-    }
+  	return count;
+  }
     
-    private static boolean isPrime(int n) {
-        if (n<2) return false;
-        for (int i=2; i<=Math.sqrt(n); i++) {
-            if (n%i==0) return false; 
-        }
-        return true;
+  private static boolean isPrime(int n) {
+    if (n<2) return false;
+    for (int i=2; i<=Math.sqrt(n); i++) {
+    	if (n%i==0) return false; 
     }
+  	return true;
+  }
 }
 ```
