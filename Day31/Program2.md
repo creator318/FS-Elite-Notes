@@ -54,11 +54,8 @@ class SegmentTree {
     n = arr.length;
     tree = new int[2 * n];
     System.arraycopy(arr, 0, tree, n, n);
-    build();
-  }
-
-  void build() {
-    for (int i=n-1; i>0; i--) {
+   
+     for (int i=n-1; i>0; i--) {
       tree[i] = Math.max(tree[i*2], tree[i*2 + 1]);
     }
   }
