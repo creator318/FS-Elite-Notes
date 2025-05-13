@@ -1,4 +1,4 @@
-#Coding/Trees
+#Coding/BSTree/Traversal 
 
 Imagine you are the curator of a historic library, where books are arranged in a unique catalog system based on their publication years. The library’s archive is structured like a hierarchical tree, with each book’s publication year stored at a node. You are given the nodes of this catalog tree starting with main node and a list of query years.
 

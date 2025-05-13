@@ -1,4 +1,4 @@
-#Mongodb/AggregateQuery 
+#MongoDB/AggregateQuery 
 
 Write a MongoDB query to find the Total Number of Students in Each City
 Print the output in the sorted order of the city name.

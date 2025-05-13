@@ -1,4 +1,4 @@
-#Coding/BackTracking 
+#Coding/Backtracking 
 
 Given two strings S1 and S2, find if S2 can match S1 or not.
 

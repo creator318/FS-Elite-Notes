@@ -1,4 +1,4 @@
-#Mongodb/AggregateQuery 
+#MongoDB/AggregateQuery 
 
 Write a MongoDB aggregation query to list all doctors along with their specialization (s) and count of total appointments each doctor has handled.
 

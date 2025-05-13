@@ -1,4 +1,4 @@
-#Mongodb/AggregateQuery 
+#MongoDB/AggregateQuery 
 
 Write a MongoDB query to find the average exam score for each student
 Print the output in the sorted order of the student names.

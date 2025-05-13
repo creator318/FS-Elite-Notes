@@ -1,4 +1,4 @@
-#Coding/Trees 
+#Coding/BSTree/Traversal 
 
 Imagine you are an explorer who stumbles upon two ancient treasure chests. However, these aren’t ordinary chests—the coins inside are arranged in a mysterious, branching order. In each chest, the coins are hidden in secret compartments where lower valued coins are tucked away on one side and higher valued coins are placed on the opposite side. To unlock the legendary vault of riches, you must select one coin from the first chest and one from the second chest such that their magical values add up to a secret key number.
 Your challange is to return true if you can unlock the legendary vault of riches, otherwise false.

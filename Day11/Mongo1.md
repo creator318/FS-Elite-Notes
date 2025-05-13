@@ -1,4 +1,4 @@
-#Mongodb/Query
+#MongoDB/Query
 
 Write a MongoDB query to find students aged between 18 and 21
 And display student_id, name and age only.

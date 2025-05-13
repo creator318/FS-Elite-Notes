@@ -1,4 +1,4 @@
-#JS/WebSockets #Web/Backend #Mongodb 
+#JS/WebSockets #Web/Backend #MongoDB 
 
 Employee Management WebSocket Application with MongoDB
 

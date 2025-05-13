@@ -1,4 +1,4 @@
-#Coding/BackTracking 
+#Coding/Backtracking 
 
 Ramesh and Suresh are best friends. They decided to play a word game.
 

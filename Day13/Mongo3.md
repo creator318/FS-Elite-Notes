@@ -1,4 +1,4 @@
-#Mongodb/AggregateQuery 
+#MongoDB/AggregateQuery 
 
 Write a MongoDB query to compute each student’s overall average score (rounded 
 to 2 decimals) from all exam score entries and sort the data by student_id.

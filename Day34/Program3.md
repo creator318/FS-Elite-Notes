@@ -1,4 +1,4 @@
-#Coding/BackTracking 
+#Coding/Backtracking 
 
 Given a classic mobile phone, and the key pad of the phone looks like below.
 

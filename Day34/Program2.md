@@ -1,4 +1,4 @@
-#Coding/BackTracking 
+#Coding/Backtracking 
 
 Bablu is working in a construction field.
 He has N number of building blocks, where the height and width of all the blocks are same and the length of each block is given in an array, blocks\[].

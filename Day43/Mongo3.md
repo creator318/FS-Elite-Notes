@@ -1,4 +1,4 @@
-#Mongodb/AggregateQuery 
+#MongoDB/AggregateQuery 
 
 Write a MongoDB aggregation query to determine how frequently each medicine is prescribed. List medicines in descending order of their usage frequency.
 

@@ -1,4 +1,4 @@
-#Mongodb/AggregateQuery 
+#MongoDB/AggregateQuery 
 
 Write a MongoDB aggregation query to count how many appointments are booked for Inpatients versus Outpatients.
 

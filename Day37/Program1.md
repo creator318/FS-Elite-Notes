@@ -1,4 +1,4 @@
-#Coding/BackTracking 
+#Coding/Backtracking 
 
 In a forgotten realm, explorers often find ancient treasure maps written as long strings of mysterious characters with no spaces. Luckily, they also carry an ancient wordbook (pathBook) containing all the known names of places, landmarks, and directions.
 

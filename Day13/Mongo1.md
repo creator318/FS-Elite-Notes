@@ -1,4 +1,4 @@
-#Mongodb/AggregateQuery 
+#MongoDB/AggregateQuery 
 
 Write a MongoDB query to calculate the average score from the "final" exam 
 for each subject across all students, print the output in the sorted order 

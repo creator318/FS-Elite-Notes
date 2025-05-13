@@ -1,4 +1,4 @@
-#Mongodb/AggregateQuery 
+#MongoDB/AggregateQuery 
 
 Write a MongoDB query to count how many students are enrolled in each course.
 Print the data in sorted order of course name.

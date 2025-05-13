@@ -1,4 +1,4 @@
-#Coding/BackTracking 
+#Coding/Backtracking 
 
 A shipping company is managing two cargo ships: a large cargo ship and a smaller cargo ship. The company has divided the large cargo ship into X compartments and the smaller cargo ship into Y compartments, where X > Y.
 

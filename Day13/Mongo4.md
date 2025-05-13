@@ -1,4 +1,4 @@
-#Mongodb/Query  
+#MongoDB/Query  
 
 Write a MongoDB query to retrieve guardian contact information for students 
 who have failed at least one exam

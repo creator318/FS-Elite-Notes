@@ -81,34 +81,29 @@ public class Solution {
   }
   
   private static int maxTargets(char[][] grid) {
-    int res = 0;
-    
-    for (int i=0; i<grid.length; i++) {
-      for (int j=0; j<grid[0].length; j++) {
-        int curr = 0;
-        
-        if (grid[i][j]=='0') {
-          for (int r=i-1; r>=0; r--) 
-            if (grid[r][j]=='D') curr++;
-            else if (grid[r][j]=='B') break;
-            
-          for (int r=i+1; r<grid.length; r++) 
-            if (grid[r][j]=='D') curr++;
-            else if (grid[r][j]=='B') break;
-            
-          for (int c=j-1; c>=0; c--) 
-            if (grid[i][c]=='D') curr++;
-            else if (grid[i][c]=='B') break;
-            
-          for (int c=i+1; c<grid[0].length; c++) 
-            if (grid[i][c]=='D') curr++;
-            else if (grid[i][c]=='B') break;
+    int r = grid.length, c = grid[0].length, res = -1;
+    int vals[][] = new int[r][c];
 
-          res = Math.max(res, curr);
-        }
+
+    int up[] = new int[c], down[] = new int[c]; 
+    for (int i=0; i<r; i++) {
+      int left = 0, right = 0;
+      for (int j=0; j<c; j++) {
+        if (grid[i][j]=='D') { left++; up[j]++; }
+        else if (grid[i][j]=='B') left = up[j] = 0; 
+        else vals[i][j] += left + up[j];
+
+        int rj = c-1-j;
+        if (grid[i][rj]=='D') right++;
+        else if (grid[i][rj]=='B') right = 0;
+        else vals[i][rj] += right;
+    
+        int ri = r-1-i;
+        if (grid[ri][j]=='D') down[j]++;
+        else if (grid[ri][j]=='B') down[j] = 0;
+        else res = Math.max(res, vals[ri][j] += down[j]);
       }
     }
-    
     return res;
   }
 }

@@ -1,4 +1,4 @@
-#Coding/Trees 
+#Coding/Trees/Traversal #Coding/BFS  
 
 Imagine you are navigating a maze where each path you take has a section with a 
 code. The maze is structured as a series of interconnected rooms, 

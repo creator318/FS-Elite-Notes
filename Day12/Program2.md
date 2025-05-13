@@ -1,4 +1,4 @@
-#Coding/Trees/Traversal  #Coding/DFS #Coding/BackTracking 
+#Coding/Trees/Traversal  #Coding/DFS #Coding/Backtracking 
 
 Imagine a company where each employee has a performance score, and the organizational chart is structured as a binary tree with the CEO at the top. 
 An employee is considered "outstanding" if, along the chain of command from the CEO down to that employee, no one has a performance score higher than that employee's score. Your task is to determine the total number of outstanding employees in the company.

@@ -1,4 +1,4 @@
-#Mongodb/Query 
+#MongoDB/Query 
 
 Write a MongoDB query to find students whose guardian is a "Father"
 And display student_id, name only.

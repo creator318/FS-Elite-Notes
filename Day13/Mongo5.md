@@ -1,4 +1,4 @@
-#Mongodb/
+#MongoDB/AggregateQuery 
 
 Write a MongoDB query to identify the student with the highest average score 
 specifically for the "Python" subject.

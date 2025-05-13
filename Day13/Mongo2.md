@@ -1,4 +1,4 @@
-#Mongodb/AggregateQuery 
+#MongoDB/AggregateQuery 
 
 Write a MongoDB query for students older than 20, display the student’s name 
 along with the number of courses they’re enrolled in.

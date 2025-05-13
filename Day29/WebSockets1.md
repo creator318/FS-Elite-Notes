@@ -1,4 +1,4 @@
-#JS/WebSockets #Web/Backend #Mongodb 
+#JS/WebSockets #Web/Backend #MongoDB 
 
 Real-Time Group Chat using WebSockets:
 ----------------------------------
